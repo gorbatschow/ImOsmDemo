@@ -20,6 +20,9 @@ add_subdirectory(external/stb)
 # IMAPP
 add_subdirectory(external/imapp)
 
+# IMOSMWIDGET
+add_subdirectory(external/imosmwidget)
+
 # EXECUTABLE
 add_subdirectory(src)
 
