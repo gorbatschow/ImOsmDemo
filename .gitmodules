@@ -16,3 +16,6 @@
 [submodule "external/imapp/imapp"]
 	path = external/imapp/imapp
 	url = git@github.com:gorbatschow/ImApplication.git
+[submodule "external/imosmwidget/imosmwidget"]
+	path = external/imosmwidget/imosmwidget
+	url = git@github.com:gorbatschow/ImOsmWidget.git
