@@ -1,0 +1,18 @@
+[submodule "external/glfw/glfw"]
+	path = external/glfw/glfw
+	url = git@github.com:glfw/glfw.git
+[submodule "external/imgui/imgui"]
+	path = external/imgui/imgui
+	url = git@github.com:ocornut/imgui.git
+[submodule "external/implot/implot"]
+	path = external/implot/implot
+	url = git@github.com:epezent/implot.git
+[submodule "external/stb/stb"]
+	path = external/stb/stb
+	url = git@github.com:nothings/stb.git
+[submodule "external/imfonts/imfonts"]
+	path = external/imfonts/imfonts
+	url = git@github.com:gorbatschow/ImFonts.git
+[submodule "external/imapp/imapp"]
+	path = external/imapp/imapp
+	url = git@github.com:gorbatschow/ImApplication.git
