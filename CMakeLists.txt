@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16.0)
 
-project(ImProject VERSION 1.0.0)
+project(ImOsmDemo VERSION 1.0.0)
 
 # GLFW
 add_subdirectory(external/glfw)
