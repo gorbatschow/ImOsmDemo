@@ -1,6 +1,7 @@
 #pragma once
 #include <ImApplication.h>
 #include <ImOsmWidget.h>
+#include <ImWrapper.h>
 
 class ImOsmDemoApp : public ImApplication {
 public:
@@ -12,4 +13,8 @@ protected:
 
 private:
   ImOsmWidget _osmWidget;
+  ImWrap::Button _worldBtn{"World"};
+  ImWrap::Button _berlinBtn{"Berlin"};
+  ImWrap::Button _parisBtn{"Paris"};
+  ImWrap::Button _madridBtn{"Madrid"};
 };
