@@ -1,11 +1,23 @@
 #include "ImOsmDemoApp.h"
+#include <imgui_internal.h>
 
-ImOsmDemoApp::ImOsmDemoApp() {}
+ImOsmDemoApp::ImOsmDemoApp()
+    : ImApplication("Demo using Open Street Map and ImGui") {}
 
 ImOsmDemoApp::~ImOsmDemoApp() {}
 
+void ImOsmDemoApp::beforeLoop() {}
+
 void ImOsmDemoApp::paint() {
-  ImGui::Begin("Map widget");
+
+  if (_firstPaint) {
+    ImGuiID centralNode = ImGui::DockBuilderGetCentralNode(dockSpaceID())->ID;
+    ImGui::DockBuilderDockWindow("MapWidget", centralNode);
+    _firstPaint = false;
+  }
+
+  ImGui::Begin("MapWidget");
+
   ImGui::Text("MOUSE: lon %.2f, lat %.2f", _osmWidget.mouseLon(),
               _osmWidget.mouseLat());
   ImGui::Text("VIEW: lon %.2f-%.2f, lat %.2f-%.2f ", _osmWidget.minLon(),

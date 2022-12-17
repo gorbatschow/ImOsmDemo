@@ -9,6 +9,7 @@ public:
   ~ImOsmDemoApp();
 
 protected:
+  void beforeLoop() override;
   void paint() override;
 
 private:
@@ -17,4 +18,5 @@ private:
   ImWrap::Button _berlinBtn{"Berlin"};
   ImWrap::Button _parisBtn{"Paris"};
   ImWrap::Button _madridBtn{"Madrid"};
+  bool _firstPaint{true};
 };
