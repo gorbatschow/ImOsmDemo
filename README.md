@@ -3,6 +3,8 @@
 This is an application for demonstrate possibilities of ![ImOsmWidget](https://github.com/gorbatschow/ImOsmWidget).
 It is based on ![ImProject](https://github.com/gorbatschow/ImProject) template.
 
+ImOsmWidget is included as submodule in directory *external/imosmwidget/*.
+
 In short I use ImGui with GLFW backend, ImPlot, CURL and STB libraries to display interactive map using tiles provided by OpenStreetMap.
 
 ![image](doc/demo.gif)
