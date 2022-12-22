@@ -11,12 +11,12 @@ In short I use ImGui with GLFW backend, ImPlot, CURL and STB libraries to displa
 
 ## Ubuntu dependencies
 
-Probably you have to install the following packages for ImGui with GLFW backend
+For ImGui with GLFW backend the following packages must be installed
 ```
-sudo apt install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev freeglut3-dev
+libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev freeglut3-dev
 ```
-and of course you will need CURL
+For ImOsmWidget libcurl needed
 ```
-sudo apt install curl
+libcurl4-gnutls-dev
 ```
 
