@@ -19,11 +19,13 @@ void ImOsmDemoApp::paint() {
   ImGui::Begin("MapWidget");
 
   ImGui::Text("FPS: %.0f", ImGui::GetIO().Framerate);
-
   ImGui::Text("MOUSE: lon %.2f, lat %.2f", _osmWidget.mouseLon(),
               _osmWidget.mouseLat());
   ImGui::Text("VIEW: lon %.2f-%.2f, lat %.2f-%.2f ", _osmWidget.minLon(),
               _osmWidget.maxLon(), _osmWidget.minLat(), _osmWidget.maxLat());
+
+  ImGui::Text("Remotes: %d",
+              OsmTileLoader::Countable<OsmTileLoader::RemoteTile>::alive());
 
   _worldBtn.paint();
   if (_worldBtn.handle()) {
