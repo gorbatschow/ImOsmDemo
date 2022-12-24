@@ -24,8 +24,7 @@ void ImOsmDemoApp::paint() {
   ImGui::Text("VIEW: lon %.2f-%.2f, lat %.2f-%.2f ", _osmWidget.minLon(),
               _osmWidget.maxLon(), _osmWidget.minLat(), _osmWidget.maxLat());
 
-  ImGui::Text("Remotes: %d",
-              OsmTileLoader::Countable<OsmTileLoader::RemoteTile>::alive());
+  ImGui::Text("Tiles: %d", _osmWidget.loader().tilesNum());
 
   _worldBtn.paint();
   if (_worldBtn.handle()) {
