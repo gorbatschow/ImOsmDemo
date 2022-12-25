@@ -8,8 +8,8 @@ set(IMPLOT_SOURCES
     implot/implot_demo.cpp
 )
 
-add_library(implot ${IMPLOT_SOURCES})
-target_include_directories (implot PUBLIC implot)
-target_link_libraries(implot PUBLIC imgui)
+add_library(${PROJECT_NAME} ${IMPLOT_SOURCES})
+target_include_directories (${PROJECT_NAME} PUBLIC implot)
+target_link_libraries(${PROJECT_NAME} PUBLIC imgui)
 
 

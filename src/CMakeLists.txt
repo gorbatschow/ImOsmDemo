@@ -10,7 +10,7 @@ set(IMPROJECTEXE_SOURCES
     ImOsmDemoApp.cpp
 )
 
-add_executable(ImOsmDemoExe ${IMPROJECTEXE_SOURCES})
-target_include_directories(ImOsmDemoExe PUBLIC .)
-target_link_libraries(ImOsmDemoExe PUBLIC ImApplication)
-target_link_libraries(ImOsmDemoExe PUBLIC ImOsmWidget)
+add_executable(${PROJECT_NAME} ${IMPROJECTEXE_SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC .)
+target_link_libraries(${PROJECT_NAME} PUBLIC ImApplication)
+target_link_libraries(${PROJECT_NAME} PUBLIC ImOsmWidget)

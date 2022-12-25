@@ -23,6 +23,6 @@ set(IMGUI_SOURCES
     imgui/backends/imgui_impl_opengl3.cpp
 )
 
-add_library(imgui ${IMGUI_SOURCES})
-target_include_directories (imgui PUBLIC imgui)
-target_link_libraries (imgui PUBLIC glfw)
+add_library(${PROJECT_NAME} ${IMGUI_SOURCES})
+target_include_directories (${PROJECT_NAME} PUBLIC imgui)
+target_link_libraries (${PROJECT_NAME} PUBLIC glfw)

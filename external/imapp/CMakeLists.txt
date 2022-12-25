@@ -9,14 +9,14 @@ set(IMAPPLICATION_SOURCES
     imapp/ImApplication.cpp
 )
 
-add_library(ImApplication ${IMAPPLICATION_SOURCES})
-target_include_directories(ImApplication PUBLIC imapp)
-target_link_libraries(ImApplication PUBLIC glfw)
-target_link_libraries(ImApplication PUBLIC imgui)
-target_link_libraries(ImApplication PUBLIC implot)
-target_link_libraries(ImApplication PUBLIC imfonts)
-target_link_libraries(ImApplication PUBLIC stb)
+add_library(${PROJECT_NAME} ${IMAPPLICATION_SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC imapp)
+target_link_libraries(${PROJECT_NAME} PUBLIC glfw)
+target_link_libraries(${PROJECT_NAME} PUBLIC imgui)
+target_link_libraries(${PROJECT_NAME} PUBLIC implot)
+target_link_libraries(${PROJECT_NAME} PUBLIC imfonts)
+target_link_libraries(${PROJECT_NAME} PUBLIC stb)
 
 include(FindOpenGL)
-target_link_libraries(ImApplication PUBLIC ${OPENGL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} PUBLIC ${OPENGL_LIBRARIES})
 

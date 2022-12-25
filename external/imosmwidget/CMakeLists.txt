@@ -11,10 +11,10 @@ set(IMOSMWIDGET_SOURCES
     imosmwidget/OsmTileTexture.cpp
 )
 
-add_library(ImOsmWidget ${IMOSMWIDGET_SOURCES})
-target_include_directories(ImOsmWidget PUBLIC imosmwidget)
-target_link_libraries(ImOsmWidget PUBLIC imgui)
-target_link_libraries(ImOsmWidget PUBLIC implot)
-target_link_libraries(ImOsmWidget PUBLIC stb)
-target_link_libraries(ImOsmWidget PUBLIC curl)
-target_compile_features(ImOsmWidget PUBLIC cxx_std_17)
+add_library(${PROJECT_NAME} ${IMOSMWIDGET_SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC imosmwidget)
+target_link_libraries(${PROJECT_NAME} PUBLIC imgui)
+target_link_libraries(${PROJECT_NAME} PUBLIC implot)
+target_link_libraries(${PROJECT_NAME} PUBLIC stb)
+target_link_libraries(${PROJECT_NAME} PUBLIC curl)
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)

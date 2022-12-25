@@ -13,5 +13,5 @@ set(IMFONTS_SOURCES
     imfonts/RobotoMonoItalic.cpp
 )
 
-add_library(imfonts ${IMFONTS_SOURCES})
-target_include_directories(imfonts PUBLIC imfonts)
+add_library(${PROJECT_NAME} ${IMFONTS_SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC imfonts)
