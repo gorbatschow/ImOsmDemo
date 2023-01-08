@@ -1,7 +1,7 @@
 # ImOsmWidgetDemo
 
-This is an application for demonstrate possibilities of ![ImOsmWidget](https://github.com/gorbatschow/ImOsmWidget).
-It is based on ![ImProject](https://github.com/gorbatschow/ImProject) template.
+This is an application for demonstrate possibilities of [ImOsmWidget](https://github.com/gorbatschow/ImOsmWidget).
+It is based on [ImProject](https://github.com/gorbatschow/ImProject) template.
 
 ImOsmWidget is included as submodule in directory *external/imosmwidget/*.
 
