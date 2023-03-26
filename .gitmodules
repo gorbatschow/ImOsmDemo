@@ -19,3 +19,5 @@
 [submodule "external/imosmwidget/imosmwidget"]
 	path = external/imosm/imosm
 	url = git@github.com:gorbatschow/ImOsmWidget.git
+[submodule "imosm"]
+	url = git@github.com:gorbatschow/ImOsm.git
