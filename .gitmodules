@@ -21,3 +21,9 @@
 	url = git@github.com:gorbatschow/ImOsmWidget.git
 [submodule "imosm"]
 	url = git@github.com:gorbatschow/ImOsm.git
+[submodule "external/imwrap/ImWrap"]
+	path = external/imwrap/imwrap
+	url = git@github.com:gorbatschow/ImWrap.git
+[submodule "external/mini/mini"]
+	path = external/mini/mini
+	url = git@github.com:pulzed/mINI.git

@@ -1,9 +1,9 @@
 #pragma once
-#include <ImApplication.h>
-#include <ImOsmWidget.h>
-#include <ImWrapper.h>
+#include <imapp.h>
+#include <imosm.h>
+#include <imwrap.h>
 
-class ImOsmDemoApp : public ImApplication {
+class ImOsmDemoApp : public ImApp::MainWindow {
 public:
   ImOsmDemoApp();
   ~ImOsmDemoApp();
@@ -13,10 +13,11 @@ protected:
   void paint() override;
 
 private:
-  ImOsmWidget _osmWidget;
   ImWrap::Button _worldBtn{"World"};
   ImWrap::Button _berlinBtn{"Berlin"};
   ImWrap::Button _parisBtn{"Paris"};
   ImWrap::Button _madridBtn{"Madrid"};
   bool _firstPaint{true};
+
+  ImOsm::MapPlot _mapPlot;
 };
