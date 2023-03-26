@@ -1,4 +1,4 @@
-# ImOsmWidgetDemo
+# ImOsmDemo
 
 This is an application for demonstrate possibilities of [ImOsmWidget](https://github.com/gorbatschow/ImOsmWidget).
 It is based on [ImProject](https://github.com/gorbatschow/ImProject) template.
