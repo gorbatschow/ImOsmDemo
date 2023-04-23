@@ -26,6 +26,9 @@ add_subdirectory(external/imapp)
 # IMWRAP
 add_subdirectory(external/imwrap)
 
+# LATLON
+add_subdirectory(external/latlon)
+
 # IMOSM
 add_subdirectory(external/imosm)
 

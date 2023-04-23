@@ -27,3 +27,6 @@
 [submodule "external/mini/mini"]
 	path = external/mini/mini
 	url = git@github.com:pulzed/mINI.git
+[submodule "external/latlon/latlon"]
+	path = external/latlon/latlon
+	url = git@github.com:gorbatschow/latlon.git
