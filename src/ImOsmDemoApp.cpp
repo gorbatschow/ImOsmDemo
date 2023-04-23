@@ -69,6 +69,10 @@ void ImOsmDemoApp::paint() {
   ImGui::End();
 
   ImGui::Begin("MarkWidget");
-  _markWidget->paint();
+  _distanceCalcWidget->paint();
+  ImGui::Separator();
+  _destinationCalcWidget->paint();
+  ImGui::Separator();
+  _markEditorWidget->paint();
   ImGui::End();
 }
