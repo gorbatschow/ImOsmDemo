@@ -1,9 +1,20 @@
 #include "ImOsmDemoApp.h"
 #include <imgui_internal.h>
 
-ImOsmDemoApp::ImOsmDemoApp() : ImApp::MainWindow("ImOsm Demo Application") {}
+ImOsmDemoApp::ImOsmDemoApp()
+    : ImApp::MainWindow("ImOsm Demo Application") {
+  mINI::INIStructure ini;
+  mINI::INIFile iniFile(_iniFileNameMark);
+  iniFile.read(ini);
+  _markStorage->loadState(ini);
+}
 
-ImOsmDemoApp::~ImOsmDemoApp() {}
+ImOsmDemoApp::~ImOsmDemoApp() {
+  mINI::INIStructure ini;
+  mINI::INIFile iniFile(_iniFileNameMark);
+  _markStorage->saveState(ini);
+  iniFile.write(ini);
+}
 
 void ImOsmDemoApp::beforeLoop() {}
 

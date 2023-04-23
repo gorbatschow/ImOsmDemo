@@ -26,4 +26,7 @@ private:
       std::make_shared<ImOsm::RichMarkStorage>()};
   std::unique_ptr<ImOsm::RichMarkWidget> _markWidget{
       std::make_unique<ImOsm::RichMarkWidget>(_mapPlot, _markStorage)};
+
+  const std::string _iniFileNameMain{"imosm_demo.ini"};
+  const std::string _iniFileNameMark{"imosm_mark.ini"};
 };
