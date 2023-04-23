@@ -7,14 +7,12 @@ ImOsmDemoApp::~ImOsmDemoApp() {}
 
 void ImOsmDemoApp::beforeLoop() {}
 
+void ImOsmDemoApp::firstPaint() {
+  const ImGuiID centralNode{ImGui::DockBuilderGetCentralNode(dockSpaceID())->ID};
+  ImGui::DockBuilderDockWindow("MapWidget", centralNode);
+}
+
 void ImOsmDemoApp::paint() {
-
-  if (_firstPaint) {
-    ImGuiID centralNode = ImGui::DockBuilderGetCentralNode(dockSpaceID())->ID;
-    ImGui::DockBuilderDockWindow("MapWidget", centralNode);
-    _firstPaint = false;
-  }
-
   ImGui::Begin("MapWidget");
 
   ImGui::Text("FPS: %.0f", ImGui::GetIO().Framerate);

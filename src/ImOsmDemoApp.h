@@ -11,6 +11,7 @@ public:
 
 protected:
   void beforeLoop() override;
+  void firstPaint() override;
   void paint() override;
 
 private:
@@ -18,7 +19,6 @@ private:
   ImWrap::Button _berlinBtn{"Berlin"};
   ImWrap::Button _parisBtn{"Paris"};
   ImWrap::Button _madridBtn{"Madrid"};
-  bool _firstPaint{true};
 
   std::shared_ptr<ImOsm::RichMapPlot> _mapPlot{
       std::make_shared<ImOsm::RichMapPlot>()};
