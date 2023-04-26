@@ -4,6 +4,16 @@
 #include <imosm_rich.h>
 #include <imwrap.h>
 
+namespace ImOsm {
+namespace Rich {
+class RichMapPlot;
+class MarkStorage;
+class MarkEditorWidget;
+class DistanceCalcWidget;
+class DestinationCalcWidget;
+} // namespace Rich
+} // namespace ImOsm
+
 class ImOsmDemoApp : public ImApp::MainWindow {
 public:
   ImOsmDemoApp();
@@ -20,20 +30,13 @@ private:
   ImWrap::Button _parisBtn{"Paris"};
   ImWrap::Button _madridBtn{"Madrid"};
 
-  std::shared_ptr<ImOsm::Rich::RichMapPlot> _mapPlot{
-      std::make_shared<ImOsm::Rich::RichMapPlot>()};
-
-  std::shared_ptr<ImOsm::Rich::MarkStorage> _markStorage{
-      std::make_shared<ImOsm::Rich::MarkStorage>()};
-
-  std::unique_ptr<ImOsm::Rich::MarkEditorWidget> _markEditorWidget{
-      std::make_unique<ImOsm::Rich::MarkEditorWidget>(_mapPlot, _markStorage)};
-
-  std::unique_ptr<ImOsm::Rich::DistanceCalcWidget> _distanceCalcWidget{
-      std::make_unique<ImOsm::Rich::DistanceCalcWidget>(_markStorage)};
-
-  std::unique_ptr<ImOsm::Rich::DestinationCalcWidget> _destinationCalcWidget{
-      std::make_unique<ImOsm::Rich::DestinationCalcWidget>(_markStorage)};
+  std::shared_ptr<ImOsm::Rich::RichMapPlot> _mapPlot;
+  std::shared_ptr<ImOsm::Rich::MarkStorage> _markStorage;
+  std::unique_ptr<ImOsm::Rich::MarkEditorWidget> _markEditorWidget;
+  std::unique_ptr<ImOsm::Rich::DistanceCalcWidget> _distanceCalcWidget;
+  std::unique_ptr<ImOsm::Rich::DestinationCalcWidget> _destinationCalcWidget;
+  std::unique_ptr<ImOsm::TileSourceWidget> _tileSourceWidget;
+  std::unique_ptr<ImOsm::TileGrabberWidget> _tileGrabberWidget;
 
   const std::string _iniFileNameMain{"imosm_demo.ini"};
   const std::string _iniFileNameMark{"imosm_mark.ini"};
